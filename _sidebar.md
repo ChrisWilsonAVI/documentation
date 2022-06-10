@@ -1,4 +1,7 @@
-- [General](./general/index.md)
+- General
+  - [Definitions](./general/index.md)
+  - [Integration Process](./general/integrationProcess.md)
+  - [Proposed Process](./general/proposedProcess.md)
 - Sales
   - [General](./sales/index.md)
   - [Process](./sales/process.md)
