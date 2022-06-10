@@ -1,5 +1,7 @@
 - [General](./general/index.md)
-- [Sales](./sales/index.md)
+- Sales
+  - [General](./sales/index.md)
+  - [Process](./sales/process.md)
 - [Operations](./operations/index.md)
 - [Procurement](./procurement/index.md)
 - [Finance](./finance/index.md)
