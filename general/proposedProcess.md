@@ -4,8 +4,7 @@
 graph TB
 
     %%Styles
-    classDef new fill:#00205c,color:#E7E7E7,stroke-width:0;
-    classDef change fill:#92C73A,color:#E7E7E7,stroke-width:0;
+    classDef change fill:#00205c,color:#E7E7E7,stroke-width:0;
 
     %%Stages
     Lead[Lead]
@@ -28,18 +27,15 @@ graph TB
     KickOff([Kick Off Meeting])
     EquipmentLoading([Equipment Loading])
     ResourceRequest([Resource Requests])
-    Procurement([Equipment Ordering])
+    Procurement([Equipment Ordering]):::change
     GoodsIn([Equipment Received])
-    %% RackFab([Rack Fabrication])
-    %% WitnessTest([Witness Testing])
     GoodsOut([Equipment Sent to Site])
     Installation([Installation])
     Commissioning([Commissioning])
-    %% ProgrammingOffsite([Offsite Programming])
     ClientHandover([Client Handover])
     InternalHandover([Handover to Service])
     Support([Support Contract Initiated])
-    contractConfirmed([Contract Terms Updated]):::new
+    contractConfirmed([Contract Terms Updated]):::change
 
     %% generation
     Lead-->Demand
@@ -68,7 +64,7 @@ graph TB
     KickOff --> EquipmentLoading
     KickOff --> ResourceRequest
 
-
+    %% procurement/logistics
     contractConfirmed ====> Procurement
     EquipmentLoading --> Procurement
     Procurement --> GoodsIn
@@ -77,8 +73,11 @@ graph TB
     ResourceRequest ----> Installation
     GoodsOut --> Installation
 
+    %% install
     Installation --> Commissioning
     Commissioning ---> ClientHandover
     Commissioning --> InternalHandover
     InternalHandover --> Support
+
+    %% support
 ```

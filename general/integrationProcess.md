@@ -1,7 +1,5 @@
 # Integration Project Process
 
-## Current Process
-
 ```mermaid
 graph TB
 
@@ -95,3 +93,7 @@ graph TB
   - Consider service involvement
 - Proposed Change
   - Project created at verbal
+- To be considered but left of form simplicity
+  - Programming
+  - Rack Fabrication
+  - Witness Testing
