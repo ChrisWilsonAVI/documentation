@@ -1,4 +1,6 @@
 - [General](./general/index.md)
 - [Sales](./sales/index.md)
 - [Operations](./operations/index.md)
+- [Procurement](./procurement/index.md)
 - [Finance](./finance/index.md)
+- [Human Resources](./hr/index.md)
