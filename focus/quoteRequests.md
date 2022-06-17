@@ -61,13 +61,11 @@ Requests separate into three work flows:
 ## Design Pack
 
 1. When opportunity reaches 'Verbal' add event trigger to add row to SmartSheets
-
-- Opportunity Number
-- Account Manager
-- Design Engineer
-- Sales Admin
-- Populate dates based on Est. Project Start Dates & Close Date in SF
-
+   - Opportunity Number
+   - Account Manager
+   - Design Engineer
+   - Sales Admin
+   - Populate dates based on Est. Project Start Dates & Close Date in SF
 1. Update of information handled outside of AX and Salesforce. After initial push of information no additional information is sent from SF.
 
 ### Follow Ups
