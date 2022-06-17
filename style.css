@@ -1,9 +1,3 @@
-.app-name-link {
-  margin-right: 0.5rem;
-}
-
-.process > rect {
-  fill: #ff0000;
-  stroke: #ffff00;
-  stroke-width: 4px;
+.app-name-link img {
+  width: 80%;
 }

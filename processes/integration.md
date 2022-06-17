@@ -1,99 +1,91 @@
-# Integration Project Process
+## Integration Process
+
+<!-- tabs:start -->
+
+#### **Work In Progress**
 
 ```mermaid
 graph TB
 
-    %%Styles
-    classDef stage fill:#00205c,color:#E7E7E7,stroke-width:0;
-    classDef process fill:#92C73A,color:#E7E7E7,stroke-width:0;
-
     %%Stages
-    Lead[Lead]
-    Demand([Demand Generation])
+    Lead([Demand Generation])
     Qualified(Qualified)
-    Verbal(Verbal)
+    Verbal(Verbal inc. Detailed SoW)
     Commit(Commit)
     OpportunityClose(Opportunity Closed)
-
     %%Processes
     Identified[Identified Opportunity]
     Identification([Identification])
     Quoting([Quoting])
     Quoted(Quoted)
     Revisions([Revisions])
-    Design([Design Pack])
+    Design([M&E & Schematics])
     Contract([Contract Negotiations])
-    Processing([Order Processing])
+    Processing([Order Processing inc. signed SoW])
     ProjectSetup([Project Setup])
-    KickOff([Kick Off Meeting])
+    KickOff([Internal Kick Off Meeting])
+    EKickOff([External Kick Off Meeting])
     EquipmentLoading([Equipment Loading])
     ResourceRequest([Resource Requests])
     Procurement([Equipment Ordering])
     GoodsIn([Equipment Received])
-    %% RackFab([Rack Fabrication])
-    %% WitnessTest([Witness Testing])
     GoodsOut([Equipment Sent to Site])
     Installation([Installation])
     Commissioning([Commissioning])
-    %% ProgrammingOffsite([Offsite Programming])
     ClientHandover([Client Handover])
     InternalHandover([Handover to Service])
     Support([Support Contract Initiated])
+    contractConfirmed([Contract Terms Updated])
+   %%  SignedSow([Signed Scope of Works])
 
+    %% generation
 
-    Lead-->Demand
-    Demand --> Qualified
-
+    Lead -..->Qualified
     Identified-->Identification
     Identification --> Qualified
 
+    %% design
     Qualified-->Quoting
     Quoting --> Quoted
-
     Quoted --> Revisions
     Revisions --> Verbal
 
-    Verbal --> Design
-    Design --> Commit
+
+    %% contract
     Verbal --> Contract
     Contract --> Commit
+    Commit --> contractConfirmed
+    contractConfirmed --> OpportunityClose
 
-    Commit --> Processing
+    %% mobilisation
+    Verbal --> Processing
     Processing --> ProjectSetup
-    Processing --> OpportunityClose
-
     ProjectSetup --> KickOff
-    KickOff --> EquipmentLoading
-    KickOff --> ResourceRequest
+    KickOff --> EKickOff
+    EKickOff --> EquipmentLoading
+    EKickOff --> ResourceRequest
+    EKickOff --> Design
 
+    Design ----> Installation
+
+
+
+    %% procurement/logistics
+    contractConfirmed ----> Procurement
     EquipmentLoading --> Procurement
     Procurement --> GoodsIn
     GoodsIn --> GoodsOut
 
-    ResourceRequest --> Installation
+    ResourceRequest ----> Installation
     GoodsOut --> Installation
 
+    %% install
     Installation --> Commissioning
     Commissioning ---> ClientHandover
     Commissioning --> InternalHandover
     InternalHandover --> Support
+
+    %% support
 ```
 
-## Notes
-
-- Design Pack
-  - Includes Scope of Works and M&E Drawings
-  - Chargeable Effort
-- Qualified
-  - Consider different opportunity / project types
-    - Service Only
-    - RFP / Tender
-    - Box Sale
-- Quoting
-  - Consider service involvement
-- Proposed Change
-  - Project created at verbal
-- To be considered but left of form simplicity
-  - Programming
-  - Rack Fabrication
-  - Witness Testing
+<!-- tabs:end -->

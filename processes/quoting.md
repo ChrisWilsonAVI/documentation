@@ -1,25 +1,6 @@
-## Sales High Level
+[< Integration Process](./processes/integration.md)
 
-```mermaid
-graph TB
-
-    Lead
-    Identified
-    Qualified
-    Quoted
-    Verbal
-    Commit
-
-
-    Lead-->|Demand Generation|Qualified
-    Identified-->|Qualification|Qualified
-    Qualified-->|Quoting|Quoted
-    Quoted-->|Revisions|Verbal
-    Verbal-->|Design Pack & Contact Negotiation|Commit
-    Commit-->|Order Processing|Closed[Closed Won]
-```
-
-## Quoting Process
+# Quoting Process
 
 Quoting process begins with a qualified opportunity where the Account Manager has booked a meeting with a client and a Design Engineer.
 
