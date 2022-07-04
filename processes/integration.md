@@ -26,7 +26,7 @@ graph TB
     KickOff([Internal Kick Off Meeting])
     EKickOff([External Kick Off Meeting])
     EquipmentLoading([Equipment Loading])
-    ResourceRequest([Resource Requests])
+    ResourceRequest([Project Plan & Resource Requests])
     Procurement([Equipment Ordering])
     GoodsIn([Equipment Received])
     GoodsOut([Equipment Sent to Site])
@@ -36,6 +36,8 @@ graph TB
     InternalHandover([Handover to Service])
     Support([Support Contract Initiated])
     contractConfirmed([Contract Terms Updated])
+    symphonyInfo([Service Requirements])
+    symphonyAssets([Symphony Asset Information])
    %%  SignedSow([Signed Scope of Works])
 
     %% generation
@@ -62,12 +64,14 @@ graph TB
     Processing --> ProjectSetup
     ProjectSetup --> KickOff
     KickOff --> EKickOff
+    KickOff -..-> symphonyInfo
     EKickOff --> EquipmentLoading
     EKickOff --> ResourceRequest
     EKickOff --> Design
 
     Design ----> Installation
 
+    %%symphonyInfo --> symphonyAssets
 
 
     %% procurement/logistics
@@ -81,6 +85,7 @@ graph TB
 
     %% install
     Installation --> Commissioning
+    Commissioning --> symphonyAssets
     Commissioning ---> ClientHandover
     Commissioning --> InternalHandover
     InternalHandover --> Support

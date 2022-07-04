@@ -48,16 +48,16 @@
 
 ## Lines of Business
 
-| LoB | Description                   | Notes                |
-| :-- | :---------------------------- | :------------------- |
-| 01  | Integration                   |                      |
-| 02  | Service and Maintenance       | Previously CCP       |
-| 03  | Time and Materials            |                      |
-| 04  | Onsite Managed Services (OMS) |                      |
-| 05  | Video Managed Services (VMS)  |                      |
-| 06  | Warranty                      |                      |
-| 07  | 90 Day Warranty               | No Longer Used       |
-| 08  | Box Sales                     |                      |
-| 09  | Training                      |                      |
-| 10  | Small Works                   | Not currently active |
-| 11  | License                       |                      |
+| LoB | Description                   | Notes                                         |
+| :-- | :---------------------------- | :-------------------------------------------- |
+| 01  | Integration                   | Hardware and Integration services             |
+| 02  | Service and Maintenance       | Previously CCP                                |
+| 03  | Time and Materials            |                                               |
+| 04  | Onsite Managed Services (OMS) |                                               |
+| 05  | Video Managed Services (VMS)  |                                               |
+| 06  | Warranty                      | Hardware warranties provided by a 3rd party.  |
+| 07  | 90 Day Warranty               | No Longer Used                                |
+| 08  | Box Sales                     | Hardware supply only, no integration required |
+| 09  | Training                      |                                               |
+| 10  | Small Works                   | Not currently active                          |
+| 11  | License                       | Licenses provided by a 3rd party.             |
